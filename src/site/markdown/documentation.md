@@ -1,3 +1,5 @@
+## Plugins
+
 This parent pom provides te following plugins.
 
 ### org.apache.maven.plugins:maven-source-plugin
@@ -23,3 +25,13 @@ site.
 ### com.github.github:site-maven-plugin
 The Github site plugin automatically copies and commits the projects site into the gh-pages branch so that it will be
 hosted by Github.
+
+## Dependencies
+
+This parent pom provides te following dependencies.
+
+### junit:junit
+JUnit is provided in the `test` scope to facilitate writing unit tests.
+
+### org.hamcrest:hamcrest-all
+The entirety of the Hamcrest library is provided in the `test` scope to allow access to all the matcher's.
