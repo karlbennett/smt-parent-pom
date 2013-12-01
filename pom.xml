@@ -4,7 +4,7 @@
 
     <groupId>shiver.me.timbers</groupId>
     <artifactId>smt-parent-pom</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0</version>
 
     <packaging>pom</packaging>
 
@@ -185,6 +185,6 @@
 
     <scm>
         <developerConnection>scm:git:git@github.com:karlbennett/${project.artifactId}.git</developerConnection>
-      <tag>HEAD</tag>
+      <tag>smt-parent-pom-1.0</tag>
   </scm>
 </project>
