@@ -1,6 +1,6 @@
 ## Plugins
 
-This parent pom provides te following plugins.
+This parent pom provides the following plugins.
 
 ### org.apache.maven.plugins:maven-source-plugin
 The Maven source plugin is present to make sure that the projects source is deployed.
@@ -28,7 +28,7 @@ hosted by Github.
 
 ## Dependencies
 
-This parent pom provides te following dependencies.
+This parent pom provides the following dependencies.
 
 ### junit:junit
 JUnit is provided in the `test` scope to facilitate writing unit tests.
