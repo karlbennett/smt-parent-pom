@@ -35,3 +35,6 @@ JUnit is provided in the `test` scope to facilitate writing unit tests.
 
 ### org.hamcrest:hamcrest-all
 The entirety of the Hamcrest library is provided in the `test` scope to allow access to all the matcher's.
+
+### org.mockito:mockito-all
+Mockito is provided in the `test` scope because when writing tests mocks are almost always necessary.
