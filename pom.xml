@@ -17,7 +17,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <jacoco.version>0.6.3.201306030806</jacoco.version>
+        <jacoco.version>0.7.2.201409121644</jacoco.version>
         <javadoc.version>2.9.1</javadoc.version>
         <!-- The github server credential configuration id. -->
         <github.global.server>github</github.global.server>
