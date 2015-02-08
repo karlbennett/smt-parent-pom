@@ -96,6 +96,11 @@
                     <groupId>org.jacoco</groupId>
                     <artifactId>jacoco-maven-plugin</artifactId>
                     <version>${jacoco.version}</version>
+                    <configuration>
+                        <includes>
+                            <include>shiver.me.timbers.*</include>
+                        </includes>
+                    </configuration>
                     <executions>
                         <execution>
                             <!-- Enable instrumentation of the code before the tests run. -->
