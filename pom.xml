@@ -22,6 +22,7 @@
         <!-- The github server credential configuration id. -->
         <github.global.server>github</github.global.server>
         <github.skip>true</github.skip>
+        <gpg.sign.skip>true</gpg.sign.skip>
     </properties>
 
     <profiles>
@@ -31,36 +32,17 @@
                 <github.skip>false</github.skip>
             </properties>
         </profile>
+        <profile>
+            <id>gpg</id>
+            <properties>
+                <gpg.sign.skip>false</gpg.sign.skip>
+            </properties>
+        </profile>
     </profiles>
 
     <build>
         <pluginManagement>
             <plugins>
-                <plugin>
-                    <!--Make sure we compile all the Java source as 1.7.-->
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-compiler-plugin</artifactId>
-                    <version>3.1</version>
-                    <configuration>
-                        <compilerVersion>1.7</compilerVersion>
-                        <fork>true</fork>
-                        <source>1.7</source>
-                        <target>1.7</target>
-                    </configuration>
-                </plugin>
-                <plugin>
-                    <!-- Make sure the source JAR is created. -->
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-source-plugin</artifactId>
-                    <version>2.2.1</version>
-                    <executions>
-                        <execution>
-                            <goals>
-                                <goal>jar-no-fork</goal>
-                            </goals>
-                        </execution>
-                    </executions>
-                </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-site-plugin</artifactId>
@@ -78,18 +60,6 @@
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-project-info-reports-plugin</artifactId>
                     <version>2.7</version>
-                </plugin>
-                <plugin>
-                    <!-- Set the version of the release plugin to use. -->
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-release-plugin</artifactId>
-                    <version>2.4.1</version>
-                </plugin>
-                <plugin>
-                    <!-- Enable the generation of JavaDocs. -->
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-javadoc-plugin</artifactId>
-                    <version>${javadoc.version}</version>
                 </plugin>
                 <plugin>
                     <!-- Enable Jacoco test coverage reports. -->
@@ -132,8 +102,67 @@
         </pluginManagement>
         <plugins>
             <plugin>
-                <groupId>com.github.github</groupId>
-                <artifactId>site-maven-plugin</artifactId>
+                <!--Make sure we compile all the Java source as 1.7.-->
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+                <configuration>
+                    <compilerVersion>1.7</compilerVersion>
+                    <fork>true</fork>
+                    <source>1.7</source>
+                    <target>1.7</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <!-- (Required for Maven Central) Make sure the source JAR is created. -->
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>2.2.1</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>jar-no-fork</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <!-- (Required for Maven Central) Enable the generation of JavaDocs. -->
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>${javadoc.version}</version>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <!-- (Required for Maven Central) Make sure to sign all artifacts so that they can be verified. -->
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <version>1.6</version>
+                <configuration>
+                    <skip>${gpg.sign.skip}</skip>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>sign-artifacts</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>sign</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <!-- Set the version of the release plugin to use. -->
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>2.4.1</version>
             </plugin>
         </plugins>
     </build>
@@ -199,6 +228,24 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.hamcrest</groupId>
+            <artifactId>hamcrest-all</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-all</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
 
     <scm>
         <developerConnection>scm:git:git@github.com:shiver-me-timbers/${project.artifactId}.git</developerConnection>
