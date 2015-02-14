@@ -23,6 +23,15 @@
 
     <url>http://shiver-me-timbers.github.io/${project.artifactId}/</url>
 
+    <developers>
+        <developer>
+            <name>Karl Bennett</name>
+            <email>karl.bennett.smt@gmail.com</email>
+            <organization>shiver.me.timbers</organization>
+            <organizationUrl>https://github.com/shiver-me-timbers</organizationUrl>
+        </developer>
+    </developers>
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <jacoco.version>0.7.2.201409121644</jacoco.version>
