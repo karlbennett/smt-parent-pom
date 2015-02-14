@@ -15,6 +15,7 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 [![Build Status](https://travis-ci.org/shiver-me-timbers/smt-parent-pom.svg?branch=master)](https://travis-ci.org/shiver-me-timbers/smt-parent-pom)
+
 smt-parent-pom
 ===========
 
