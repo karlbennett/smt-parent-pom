@@ -28,7 +28,7 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>shiver.me.timbers</groupId>
+    <groupId>com.github.shiver-me-timbers</groupId>
     <artifactId>smt-parent-pom</artifactId>
     <version>1.0-SNAPSHOT</version>
 
@@ -44,7 +44,7 @@
         <developer>
             <name>Karl Bennett</name>
             <email>karl.bennett.smt@gmail.com</email>
-            <organization>shiver.me.timbers</organization>
+            <organization>shiver-me-timbers</organization>
             <organizationUrl>https://github.com/shiver-me-timbers</organizationUrl>
         </developer>
     </developers>
