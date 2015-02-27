@@ -59,6 +59,7 @@
 
     <profiles>
         <profile>
+            <!-- Profile for promoting the Maven site to the Github ghpages branch. -->
             <id>github</id>
             <build>
                 <plugins>
@@ -83,6 +84,7 @@
             </build>
         </profile>
         <profile>
+            <!-- Profile for promoting artifacts to Maven central. -->
             <id>release</id>
             <build>
                 <plugins>
@@ -135,6 +137,7 @@
 
     <build>
         <pluginManagement>
+            <!-- Optional plugins. -->
             <plugins>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -176,6 +179,7 @@
             </plugins>
         </pluginManagement>
         <plugins>
+            <!-- Compulsory plugins. -->
             <plugin>
                 <!--Make sure we compile all the Java source as 1.7.-->
                 <groupId>org.apache.maven.plugins</groupId>
