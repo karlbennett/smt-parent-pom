@@ -16,7 +16,8 @@
   ~ along with this program.  If not, see <http://www.gnu.org/licenses />.
   -->
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <licenses>
         <license>
@@ -41,7 +42,7 @@
 
     <description>This is the parent pom that is used by all the shiver-me-timbers projects.</description>
 
-    <url>http://shiver-me-timbers.github.io/${project.artifactId}/</url>
+    <url>http://shiver-me-timbers.github.io/smt-parent-pom/</url>
 
     <developers>
         <developer>
@@ -56,7 +57,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <jacoco.version>0.7.4.201502262128</jacoco.version>
         <javadoc.version>2.10.2</javadoc.version>
-        <slf4j.version>1.7.10</slf4j.version>
+        <!-- This slf4j property is here so that it can be reused to synchronise the versions in child projects. -->
+        <slf4j.version>1.7.12</slf4j.version>
         <!-- The github server credential configuration id. -->
         <github.global.server>github</github.global.server>
     </properties>
@@ -260,20 +262,17 @@
             <dependency>
                 <groupId>junit</groupId>
                 <artifactId>junit</artifactId>
-                <version>4.11</version>
-                <scope>test</scope>
+                <version>4.12</version>
             </dependency>
             <dependency>
                 <groupId>org.hamcrest</groupId>
                 <artifactId>hamcrest-all</artifactId>
                 <version>1.3</version>
-                <scope>test</scope>
             </dependency>
             <dependency>
                 <groupId>org.mockito</groupId>
                 <artifactId>mockito-all</artifactId>
-                <version>1.10.8</version>
-                <scope>test</scope>
+                <version>1.10.19</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -315,6 +314,6 @@
         <connection>scm:git:https://github.com/shiver-me-timbers/${project.artifactId}.git</connection>
         <developerConnection>scm:git:git@github.com:shiver-me-timbers/${project.artifactId}.git</developerConnection>
         <url>https://github.com/shiver-me-timbers/${project.artifactId}</url>
-      <tag>HEAD</tag>
-  </scm>
+        <tag>HEAD</tag>
+    </scm>
 </project>
