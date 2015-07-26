@@ -15,11 +15,6 @@ limitations under the License.
 -->
 smt-parent-pom
 ===========
+[![Build Status](https://travis-ci.org/shiver-me-timbers/smt-parent-pom.svg?branch=master)](https://travis-ci.org/shiver-me-timbers/smt-parent-pom) [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.shiver-me-timbers/smt-parent-pom/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.github.shiver-me-timbers/smt-parent-pom/)
 
 This is the parent pom that is used by all the shiver.me.timbers projects.
-
-### Status
-[![Build Status](https://travis-ci.org/shiver-me-timbers/smt-parent-pom.svg?branch=master)](https://travis-ci.org/shiver-me-timbers/smt-parent-pom)
-
-### Maven
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.shiver-me-timbers/smt-parent-pom/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.github.shiver-me-timbers/smt-parent-pom/)
