@@ -32,7 +32,7 @@
 
     <groupId>com.github.shiver-me-timbers</groupId>
     <artifactId>smt-parent-pom</artifactId>
-    <version>1.7-SNAPSHOT</version>
+    <version>1.7</version>
 
     <packaging>pom</packaging>
 
@@ -331,6 +331,6 @@
         <connection>scm:git:https://github.com/shiver-me-timbers/${project.artifactId}.git</connection>
         <developerConnection>scm:git:git@github.com:shiver-me-timbers/${project.artifactId}.git</developerConnection>
         <url>https://github.com/shiver-me-timbers/${project.artifactId}</url>
-        <tag>smt-parent-pom-1.4</tag>
+        <tag>smt-parent-pom-1.7</tag>
     </scm>
 </project>
