@@ -15,5 +15,6 @@ limitations under the License.
 -->
 smt-parent-spring-boot
 ===========
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.shiver-me-timbers/smt-parent-spring-boot/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.github.shiver-me-timbers/smt-parent-spring-boot/)
 
 This parent pom provides access to the Spring Boot dependencies.
