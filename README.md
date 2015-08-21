@@ -13,7 +13,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 -->
-smt-parent-pom
+smt-parent
 ===========
 [![Build Status](https://travis-ci.org/shiver-me-timbers/smt-parent-pom.svg?branch=master)](https://travis-ci.org/shiver-me-timbers/smt-parent-pom) [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.shiver-me-timbers/smt-parent-pom/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.github.shiver-me-timbers/smt-parent-pom/)
 
