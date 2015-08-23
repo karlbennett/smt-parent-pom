@@ -291,14 +291,9 @@
         </repository>
     </distributionManagement>
 
-    <modules>
-        <module>smt-parent-spring-boot</module>
-    </modules>
-
     <scm>
         <connection>scm:git:https://github.com/shiver-me-timbers/${project.artifactId}.git</connection>
         <developerConnection>scm:git:git@github.com:shiver-me-timbers/${project.artifactId}.git</developerConnection>
         <url>https://github.com/shiver-me-timbers/${project.artifactId}</url>
-        <tag>smt-parent-pom-1.4</tag>
     </scm>
 </project>
